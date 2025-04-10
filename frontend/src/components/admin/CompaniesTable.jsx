@@ -38,7 +38,7 @@ const CompaniesTable = () => {
                             <tr>
                                 <TableCell>
                                     <Avatar>
-                                        <AvatarImage src={company.logo}/>
+                                        <AvatarImage src={company.logo}  alt="Company Logo"/>
                                     </Avatar>
                                 </TableCell>
                                 <TableCell>{company.name}</TableCell>

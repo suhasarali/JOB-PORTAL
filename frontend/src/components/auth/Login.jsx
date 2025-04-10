@@ -43,9 +43,7 @@ const Login = () => {
             }
         } catch (error) {
             console.log(error);
-            toast.error(error.response.data.message,{
-                className: "text-black", // Replace with bg-background text-foreground later
-              });
+            toast.error(error.response.data.message);
         } finally {
             dispatch(setLoading(false));
         }
@@ -54,7 +52,7 @@ const Login = () => {
         if(user){
             navigate("/");
         }
-    },[])
+    },[user])
     return (
         <div>
             <Navbar />
@@ -79,7 +77,7 @@ const Login = () => {
                             value={input.password}
                             name="password"
                             onChange={changeEventHandler}
-                            placeholder="patel@gmail.com"
+                            placeholder="Enter your password"
                         />
                     </div>
                     <div className='flex items-center justify-between'>
